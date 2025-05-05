@@ -49,6 +49,7 @@ const createProfile = (profile) => {
 
 const getUserData = async () => {
   let username = input.value;
+  if(username?.trim()==="") return;
   try {
     initialDiv.innerHTML = 'Loading......'
     let user = await fetch(`${url}/${username}`);

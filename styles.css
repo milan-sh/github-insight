@@ -4,14 +4,23 @@
     box-sizing: border-box;
     font-family: "Oswald", sans-serif;
 }
+.banner{
+    filter: invert(1);
+    height: 20vh;
+}
+h1{
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 h3{
     font-size: 1.2rem;
     font-weight: 600;
 }
 
 .container{
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,14 +36,16 @@ h3{
     justify-content: center;
     column-gap: 10px;
 }
-.search input{
+.search>input{
     width: 70%;
-    padding: 3px;
+    padding: 8px 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
     background-color: #001a23;
     border: 1px solid white;
-    border-radius: 2px;
+    border-radius: 5px;
     color: white;
+    font-size: 1rem;
+    outline: none;
 }
 .card{    
     display: flex;
@@ -77,10 +88,17 @@ h3{
 }
 button{
     font-family: sans-serif;
-    padding: 3px 7px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight:600;
+    color: #2c2b2b;
 }
 button:hover{
     cursor: pointer;
+    background-color: #001a23;
+    color: white;
+    outline: 2px solid gray;
 }
 #profile-cotainer{
     width: 50%;
@@ -88,12 +106,22 @@ button:hover{
     border-radius: 5px;
 }
 @media(max-width:750px){
+    h1{
+        font-size: 2rem;
+    }
+    .banner{
+        height: 8vh;
+    }
+    .container{
+        height: 100vh;
+    }
     #profile-cotainer{
         width: 80%;
     }
     .card{
-        height: 60vh;
+        height: 40vh;
         width: 80vw;
+        position: relative;
     }
     .info{
         width: 100%;
@@ -103,7 +131,8 @@ button:hover{
         column-gap: 20px;
     }
     #checkProfile{
-        left: 50px;
-        position: relative;
+        right: 5px;
+        top: 10px;
+        position: absolute;
     }
 }
